@@ -9,7 +9,7 @@ class baseclass{
             int var_base;
             void display(){
                 cout<<"The value of base class variable is: "<<var_base<<endl;
-            }
+            }   
 };
 
 class derived : public baseclass{

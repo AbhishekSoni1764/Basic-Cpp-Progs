@@ -1,5 +1,6 @@
 // agar derived class mai koi display function nhi hoga toh base class wala display execute ho jayega
 //  par pure virtual ke case mai har derived class mai display function hona jaruri hai agar aap main mai call krr rahe ho usse.
+// Abstract Base Class --> A class which at least has one virtual function.
 
 #include <iostream>
 #include <cstring>

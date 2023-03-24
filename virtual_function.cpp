@@ -5,6 +5,7 @@ class baseclass
 {
 public:
     int var_base = 10;
+    // void display()
     virtual void display()
     {
         cout << "The value of base class variable is: " << var_base << endl;
