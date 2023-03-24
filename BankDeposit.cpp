@@ -20,10 +20,7 @@ BankDeposit ::BankDeposit(int p, int y, float r)
     years = y;
     interestRate = r;
     returnValue = principal;
-    for (int i = 0; i < y; i++)
-    {
-        returnValue = returnValue * (1 + interestRate);
-    }
+    returnValue = returnValue * (1 + interestRate*y);
 }
 
 BankDeposit ::BankDeposit(int p, int y, int r)
@@ -32,22 +29,16 @@ BankDeposit ::BankDeposit(int p, int y, int r)
     years = y;
     interestRate = float(r) / 100;
     returnValue = principal;
-    for (int i = 0; i < y; i++)
-    {
-        returnValue = returnValue * (1 + interestRate);
-    }
+    returnValue = returnValue * (1 + interestRate*y);
 }
 
 void BankDeposit ::show()
 {
-    cout << endl
-         << "The Principal amount was " << principal
-         << " and The Value after " << years << " years is "
-         << returnValue << endl;
+    cout << endl<< "The Principal amount was " << principal<< " and The Value after " << years << " years is "<< returnValue << endl;
 }
 int main()
 {
-    BankDeposit c1, c2, c3;
+    BankDeposit c1, c2;
     int p, y, R;
     float r;
     cout << "Enter the value of p,y and r : ";
@@ -62,8 +53,8 @@ int main()
     c2 = BankDeposit(p, y, R);
     c2.show();
 
-    c3 = BankDeposit();
-    c3.show();
+    // c3 = BankDeposit();
+    // c3.show();
 
     return 0;
 }

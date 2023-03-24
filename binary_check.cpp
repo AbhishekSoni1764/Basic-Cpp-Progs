@@ -27,6 +27,9 @@ void binary :: check_bin(void){
             cout<<"Not a Binary Number"<<endl;
             exit(0);
         }
+        else{
+            cout<<"Binary Number"<<endl;
+        }
       
     }
     
@@ -49,7 +52,7 @@ void binary :: display(void){
     check_bin();
     for (int i = 0; i < str.length(); i++)
     {
-        cout<<str.at(i);
+        cout<<str[i];
     }
     cout<<endl;
 }
